@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+    <title>MedTech</title>
+</head>
+
+<body>
+    <div class="sidebar shadow-md">
+        <div class="image-circle">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Foto do usuário">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1 ">
+                <a href="#" class="text-light">
+                    <i class="fa-solid fa-house" style="font-size: 30px;"></i>
+                    <p style="font-size: 15px;">Início</p>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="#">
+                    <i class="fa-solid fa-file-waveform" style="font-size: 30px;"></i>
+                    <p style="font-size: 15px;">Exames</p>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="#">
+                    <i class="fa-solid fa-pills" style="font-size: 30px;"></i>
+                    <p style="font-size: 15px;">Remédios</p>
+                </a>
+            </div>
+        </div>
+
+        <div style="width: 100; display: flex; justify-content: center;">
+            <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 50px;"></i>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="ml-10">
+            <div class="d-flex" style="height: 400px; margin-bottom: 30px;">
+                <div style="width: 90%; height: 100%;" class="col bg-light shadow-md m-4 rounded-1 p-3">
+                    <h2>Saúde do corpo</h2>
+                    <h5 class="text-secondary">IMC</h5>
+                    <div style="width: 30%; height:250px;">
+                        <div style="width: 70%; height: 100%   ;" id="chart-container"></div>
+                        <script src="script.js"></script>
+                    </div>
+                    <h4 class="">Você esta no peso ideal</h4>
+                </div>
+
+                <div style="width: 90%; height: 100%;" class="col bg-light shadow-md m-4 rounded-1 p-3">
+                    <h3>Remedios</h3>
+                    <h5 class="text-secondary">Medicamentos hoje</h5>
+                    <div class="mt-5 fs-3">
+                        <div class="d-flex justify-content-between">
+                            <p>Dipirona</p>
+                            <p>07:00</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Amoxilina</p>
+                            <p>19:00</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Paracetamol</p>
+                            <p>21:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; height: 100%;" class="col bg-light shadow-md m-4 rounded-1 p-3">
+                    <h3>Exames</h3>
+                    <h5 class="text-secondary">Ultimos exames realizados</h5>
+                    <div class="mt-5 fs-3">
+                        <div>
+                            <p class="mb-0">Exame de Sangue</p>
+                            <p class="text-primary-med-tech fs-5">Disponível</p>
+                        </div>
+                        <div>
+                            <p class="mb-0">Exame de Urina</p>
+                            <p class="fs-5">Indisponível</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; height: 100%;" class="col bg-primary-med-tech shadow-md m-4 rounded-1 p-3">
+                </div>
+            </div>
+
+            <div class="d-flex" style="height: 470px; margin-bottom: 50px;">
+                <div class="d-flex" style="height: 100%; margin-bottom: 100px;">
+                    <div style="width: 90%; height: 100%;" class="col bg-light shadow-md m-4 rounded-1 p-3">
+                        <h2>Consultas</h2>
+                        <h5 class="text-secondary">Seus proximos exames</h5>
+                        <div style="width: 100%; height:100px;">
+
+                            <div id="calendar">
+                                <div id="header">
+                                    <button onclick="prevMonth()" class="button-mounth">&#8249;</button>
+                                    <span id="current-month"></span>
+                                    <button onclick="nextMonth()" class="button-mounth">&#8250;</button>
+                                </div>
+                                <script src="calendar.js"></script>
+                                <div id="days"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div style="width: 90%; height: 100%;" class="col bg-primary-med-tech shadow-md m-4 rounded-1 p-3">
+                </div>
+                <div style="width: 90%; height: 100%;" class="col bg-primary-med-tech shadow-md m-4 rounded-1 p-3">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
