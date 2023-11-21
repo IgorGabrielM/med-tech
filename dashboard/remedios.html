@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/remedios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,7 +23,7 @@
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px;">
             <div class="text-center  ">
-                <a href="/" >
+                <a href="/">
                     <i class="fa-solid fa-house" style="font-size: 20px;"></i>
                     <p style="font-size: 0.8rem">Início</p>
                 </a>
@@ -47,88 +47,109 @@
         </div>
     </div>
 
+
     <div class="content">
-        <div class="d-flex flex-wrap">
-            <div class="d-flex gap-5 flex-wrap" style="height: 400px; margin-bottom: 30px;">
-                <div style="min-width: 297px; max-width: 297px; height: 100%;" class="col bg-light shadow-md  rounded-1 p-3">
-                    <h5>Saúde do corpo</h5>
-                    <p class="text-secondary mt-n2">IMC</p>
-                    <div style="width: 100%; height:56%;">
-                        <div style="width: 100%; height: 100%   ;" id="chart-container"></div>
-                        <script src="/js/script.js"></script>
-                    </div>
-                    <h5 style="text-align: center;" class="mt-5">Você esta no peso ideal</h5>
-                </div>
-
-                <div style="min-width: 297px; max-width: 297px; height: 100%;" class="col bg-light shadow-md  rounded-1 p-3">
-                    <h5>Remedios</h5>
-                    <p class="text-secondary mt-n2">Medicamentos hoje</p>
-                    <div class="mt-5 fs-3">
-                        <div class="d-flex justify-content-between">
-                            <p>Dipirona</p>
-                            <p>07:00</p>
+        <div class="container">
+            <h2 style="margin-bottom: 20px;font-size: 40px;">Remédios</h2>
+            <div class="bg-light shadow-md p-3 rounded-1" style="height: 80vh;">
+                <div class="d-flex justify-content-between align-items-center" style="margin: 20px 10px;">
+                    <h4>Todos os remédios</h4>
+                    <div class="d-flex">
+                        <div style="width: 100px; height: 40px; border: 2px solid #b5b5b5;"
+                            class="d-flex text-black-50 rounded-1 justify-content-center align-items-center px-2 pt-3">
+                            <i class="fa-solid fa-filter"></i>
+                            <p>Filtro</p>
                         </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Amoxilina</p>
-                            <p>19:00</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Paracetamol</p>
-                            <p>21:00</p>
+                        <div style="width: 300px; height: 40px; background-color: #E3E3E3; color: #6b6b6b;"
+                            class="d-flex rounded-1 justify-content-around align-items-center px-2 pt-3">
+                            <p>Pesquisar exames</p>
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                 </div>
 
-                <div style="min-width: 297px; max-width: 297px; height: 100%;" class="col bg-light shadow-md  rounded-1 p-3">
-                    <h5>Exames</h5>
-                    <p class="text-secondary mt-n2">Ultimos exames realizados</p>
-                    <div class="mt-5 fs-3">
-                        <div>
-                            <p class="mb-0">Exame de Sangue</p>
-                            <p class="text-primary-med-tech fs-5">Disponível</p>
-                        </div>
-                        <div>
-                            <p class="mb-0">Exame de Urina</p>
-                            <p class="fs-5">Indisponível</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="min-width: 297px; max-width: 297px; height: 100%;" class="col bg-primary-med-tech shadow-md  rounded-1 p-3">
-                </div>
-
-                <div class="d-flex" style="height: 100%; min-width: 297px; ">
-                    <div style="width: 90%; height:fit-content;" class="col bg-light shadow-md  rounded-1 p-3">
-                        <h5>Consultas</h2>
-                        <p class="text-secondary mt-n2">Seus proximos exames</p>
-                        <div style="width: 100%; height:fit-content;">
-
-                            <div id="calendar">
-                                <div id="header">
-                                    <button onclick="prevMonth()" class="button-mounth">&#8249;</button>
-                                    <span id="current-month"></span>
-                                    <button onclick="nextMonth()" class="button-mounth">&#8250;</button>
-                                </div>
-                                <script src="/calendar.js"></script>
-                                <div id="days"></div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                </div>
-                
-                <div style="min-width: 297px; max-width: 297px; height: 100%;" class="col bg-primary-med-tech shadow-md  rounded-1 p-3">
-                </div>
-                <div style="min-width: 297px; max-width: 297px; height: 100%;" class="col bg-primary-med-tech shadow-md  rounded-1 p-3">
-                </div>
-            </div>
-
-            <div class="d-flex flex-wrap" style="height:fit-content;">
-                
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome do remédio</th>
+                            <th scope="col">Médico</th>
+                            <th scope="col">Dias</th>
+                            <th scope="col">Horário</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script src="../js/navigate.js"></script>
+                        <tr onclick="navigateToPill()">
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Paracetamol</td>
+                            <td>Renato Fritz</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>08:30/20:30</td>
+                            <td style="font-size: 20px;"><i class="fa-solid fa-circle-info"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

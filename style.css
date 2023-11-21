@@ -71,12 +71,9 @@ body {
 }
 
 .content {
-  background-color: #f6f6f8;
-  margin-left: 5.4rem;
+  background-color: #E5E5E5;
   padding: 2rem;
-  margin-bottom: 1rem;
   height: 100vh;
-
 }
 
 .d-flex {
@@ -147,6 +144,62 @@ body {
 }
 
 .today:hover {
+  background-color: #003c7c;
+  color: white;
+}
+
+/* Custom Calendar */
+#custom-calendar {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#custom-header {
+  margin: 0 15px;
+  border-bottom: 2px rgb(217, 217, 217) solid;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-button-month {
+  border: 0;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+#custom-header span {
+  margin: auto 0;
+  font-size: 20px;
+}
+
+#custom-days-query {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.custom-day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.custom-day:hover {
+  background-color: #e6e6e6;
+}
+
+.custom-today {
+  background-color: #5b89cd;
+  color: white;
+}
+
+.custom-today:hover {
   background-color: #003c7c;
   color: white;
 }

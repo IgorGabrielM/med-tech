@@ -28,5 +28,8 @@ option = {
     ]
 };
 // Inicializa o gráfico
-var myChart = echarts.init(document.getElementById('chart-container'));
+var myChart = echarts.init(document.getElementById('chart-container-1'));
 myChart.setOption(option);
+
+var myChart2 = echarts.init(document.getElementById('chart-container-2'));
+myChart2.setOption(option);
