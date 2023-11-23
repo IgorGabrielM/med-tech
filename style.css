@@ -203,3 +203,9 @@ body {
   background-color: #003c7c;
   color: white;
 }
+
+@media (max-width:768px) {
+  .gutter-md {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+    <title>MedTech</title>
+</head>
+
+<body>
+    <div class="sidebar shadow-md">
+        <div class="image-circle">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Foto do usuário">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="text-center">
+                <a href="/index.html">
+                    <i class="fa-solid fa-house" style="font-size: 20px;"></i>
+                    <p style="font-size: 0.8rem">Início</p>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="/dashboard/exames.html">
+                    <i class="fa-solid fa-file-waveform" style="font-size: 20px;"></i>
+                    <p style="font-size: 0.8rem">Exames</p>
+                </a>
+            </div>
+            <div class="text-center m-2 rounded-2 p-1">
+                <a href="/dashboard/remedio.html">
+                    <i class="fa-solid fa-pills" style="font-size: 20px;"></i>
+                    <p style="font-size: 0.8rem">Remédios</p>
+                </a>
+            </div>
+        </div>
+
+        <div style="width: 100; display: flex; justify-content: center;">
+            <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 30px;"></i>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="d-flex mb-3">
+                <button style="width: 150px;" class="btn-primary-med-tech" type="submit">Resumo</button>
+                <button type="button" class="btn-primary-outline-med-tech">
+                    <a href="./user-data.html">
+                        Informações pessoais
+                    </a>
+                </button>
+            </div>
+            <div class="bg-light shadow-md p-3 rounded-1" style="height: 75vh;">
+                <div class="d-flex align-items-center flex-column gap-5" style="height: 100%;">
+                    <div class="d-flex justify-content-around mt-4" style="height: 90px;">
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-flask" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Tipo sanguíneo</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">A</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="min-width: 90px"
+                                class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-triangle-exclamation"
+                                    style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Alergias</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">Salmão, alga e camarão.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-dumbbell" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>IMC</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">19,25 Bom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mt-4">
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-arrows-up-down" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Altura</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">1,65 M</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-scale-balanced" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Peso</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">65 Kg</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-droplet" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Nível de glicose</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">8.000/ml</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mt-4">
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-arrows-up-down" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Pressão arterial</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">125 mmHg</p>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="width: 300px;">
+                            <div style="width: 90px" class="bg-primary-med-tech p-3 text-light rounded-1 text-center">
+                                <i class="fa-solid fa-scale-balanced" style="font-size: 30px; margin-top: 15px;"></i>
+                            </div>
+                            <div class="mt-3">
+                                <h5>Colesterol</h5>
+                                <p style="font-size: 20px; color: rgb(159, 159, 159);">125 md/dl</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
