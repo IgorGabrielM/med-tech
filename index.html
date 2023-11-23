@@ -1,159 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+    <script src="js/sidebar.js"></script>
+
     <title>MedTech</title>
-</head>
+  </head>
 
-<body>
-    <div class="sidebar shadow-md">
-        <a href="/pages/user.html">
-            <div class="image-circle">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Foto do usuário">
-            </div>
-        </a>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1 ">
-                <a href="/" class="text-light">
-                    <i class="fa-solid fa-house" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Início</p>
-                </a>
-            </div>
-            <div class="text-center">
-                <a href="/dashboard/exames.html">
-                    <i class="fa-solid fa-file-waveform" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Exames</p>
-                </a>
-            </div>
-            <div class="text-center">
-                <a href="/dashboard/remedios.html">
-                    <i class="fa-solid fa-pills" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Remédios</p>
-                </a>
-            </div>
+  <body>
+    <div id="sidebarPc" class="sidebar shadow-md">
+      <a href="/pages/user.html">
+        <div class="image-circle">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Foto do usuário"
+          />
         </div>
+      </a>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1">
+          <a href="/" class="text-light">
+            <i class="fa-solid fa-house" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
+        </div>
+        <div class="text-center">
+          <a href="/dashboard/exames.html">
+            <i class="fa-solid fa-file-waveform" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
+        </div>
+        <div class="text-center">
+          <a href="/dashboard/remedios.html">
+            <i class="fa-solid fa-pills" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </div>
+      </div>
 
-        <div style="width: 100; display: flex; justify-content: center;">
-            <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 30px;"></i>
+      <div style="width: 100; display: flex; justify-content: center">
+        <i
+          class="fa-solid fa-shield-heart text-primary-med-tech"
+          style="font-size: 30px"
+        ></i>
+      </div>
+    </div>
+
+    <div id="sidebarMobile" class="isHidden px-5">
+      <div class="d-flex justify-content-between">
+        <i
+          id="sidebarButton"
+          class="fa-solid fa-bars"
+          style="font-size: 30px"
+        ></i>
+        <div class="image-circle">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Foto do usuário"
+          />
         </div>
+      </div>
+
+      <ul id="list" class="isHidden">
+        <li>
+          <a href="/" class="">
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/exames.html">
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/remedios.html">
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="content">
-        <div class="container">
-            <div class="row gutter-md">
-                <div class="col-sm-3" style="height: 400px">
-                    <div class="col bg-light shadow-md rounded-1 p-3" style="height: 100%">
-                        <h5>Saúde do corpo</h5>
-                        <p class="text-secondary mt-n2">IMC</p>
-                        <div style="width: 100%; height:56%;">
-                            <div style="width: 100%; height: 100%;" id="chart-container-1"></div>
-                            <script src="js/script.js"></script>
-                        </div>
-                        <h5 style="text-align: center;" class="mt-5">Você esta no peso ideal</h5>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="height: 400px">
-                    <div class="col bg-light shadow-md rounded-1 p-3" style="height: 100%">
-                        <h5>Saúde do corpo</h5>
-                        <p class="text-secondary mt-n2">IMC</p>
-                        <div style="width: 100%; height:56%;">
-                            <div style="width: 100%; height: 100%;" id="chart-container-2"></div>
-                            <script src="js/script.js"></script>
-                        </div>
-                        <h5 style="text-align: center;" class="mt-5">Você esta no peso ideal</h5>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="height: 400px">
-                    <div class="col bg-light shadow-md rounded-1 p-3" style="height: 100%">
-                        <h5>Remedios</h5>
-                        <p class="text-secondary mt-n2">Medicamentos hoje</p>
-                        <div class="mt-5 fs-3">
-                            <div class="d-flex justify-content-between">
-                                <p>Dipirona</p>
-                                <p>07:00</p>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p>Amoxilina</p>
-                                <p>19:00</p>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p>Paracetamol</p>
-                                <p>21:00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="height: 400px">
-                    <div class="col bg-light shadow-md rounded-1 p-3" style="height: 100%">
-                        <h5>Exames</h5>
-                        <p class="text-secondary mt-n2">Ultimos exames realizados</p>
-                        <div class="mt-5 fs-3">
-                            <div>
-                                <p class="mb-0">Exame de Sangue</p>
-                                <p class="text-primary-med-tech fs-5">Disponível</p>
-                            </div>
-                            <div>
-                                <p class="mb-0">Exame de Urina</p>
-                                <p class="fs-5">Indisponível</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row gutter-md">
+          <div class="col-lg-3 col-md-12 col-sm-12" style="height: 400px">
+            <div
+              class="col bg-light shadow-md rounded-1 p-3"
+              style="height: 100%"
+            >
+              <h5>Saúde do corpo</h5>
+              <p class="text-secondary mt-n2">IMC</p>
+              <div style="width: 100%; height: 56%">
+                <div
+                  style="width: 100%; height: 100%"
+                  id="chart-container-1"
+                ></div>
+                <script src="js/script.js"></script>
+              </div>
+              <h5 style="text-align: center" class="mt-5">
+                Você esta no peso ideal
+              </h5>
             </div>
-
-            <div class="row mt-5">
-                <div class="col-sm-6">
-                    <div class="d-flex" style="height: 100%; min-width: 297px; ">
-                        <div style="width: 90%; height:fit-content;" class="col bg-light shadow-md  rounded-1 p-3">
-                            <h5>Remédios</h5>
-                            <p class="text-secondary mt-n2">Seus proximos remédios</p>
-                            <div style="width: 100%; height:fit-content;">
-                                <div id="calendar">
-                                    <div id="header">
-                                        <button onclick="prevMonth()" class="button-mounth">&#8249;</button>
-                                        <span id="current-month"></span>
-                                        <button onclick="nextMonth()" class="button-mounth">&#8250;</button>
-                                    </div>
-                                    <script src="js/calendar-pills.js"></script>
-                                    <div id="days"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12" style="height: 400px">
+            <div
+              class="col bg-light shadow-md rounded-1 p-3"
+              style="height: 100%"
+            >
+              <h5>Alimentação</h5>
+              <p class="text-secondary mt-n2">Sua dieta</p>
+              <div class="mt-5 fs-3">
+                <div>
+                  <p class="mb-0">Torradas e abacate</p>
+                  <p class="text-primary-med-tech fs-5">Café da manhã</p>
                 </div>
-                <div class="col-sm-6">
-                    <div class="d-flex" style="height: 100%; min-width: 297px; ">
-                        <div style="width: 90%; height:fit-content;" class="col bg-light shadow-md  rounded-1 p-3">
-                            <h5>Consultas</h5>
-                            <p class="text-secondary mt-n2">Seus proximos exames</p>
-                            <div style="width: 100%; height:fit-content;">
-                                <div id="calendar">
-                                    <div id="header">
-                                        <button onclick="prevMonth()" class="button-mounth">&#8249;</button>
-                                        <span id="custom-current-month"></span>
-                                        <button onclick="nextMonth()" class="button-mounth">&#8250;</button>
-                                    </div>
-                                    <script src="js/calendar-queries.js"></script>
-                                    <div id="custom-days-query"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <p class="mb-0">Arroz, feijão, filé de frango e salada</p>
+                  <p class="text-primary-med-tech fs-5">Almoço</p>
                 </div>
+                <div>
+                  <p class="mb-0">Arroz, feijão, ovos mexidos e salada</p>
+                  <p class="text-primary-med-tech fs-5">Jantar</p>
+                </div>
+                
+              </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12" style="height: 400px">
+            <div
+              class="col bg-light shadow-md rounded-1 p-3"
+              style="height: 100%"
+            >
+              <h5>Remédios</h5>
+              <p class="text-secondary mt-n2">Medicamentos hoje</p>
+              <div class="mt-5 fs-3">
+                <div class="d-flex justify-content-between">
+                  <p>Dipirona</p>
+                  <p>07:00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Amoxilina</p>
+                  <p>19:00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Paracetamol</p>
+                  <p>21:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12" style="height: 400px">
+            <div
+              class="col bg-light shadow-md rounded-1 p-3"
+              style="height: 100%"
+            >
+              <h5>Exames</h5>
+              <p class="text-secondary mt-n2">Ultimos exames realizados</p>
+              <div class="mt-5 fs-3">
+                <div>
+                  <p class="mb-0">Exame de Sangue</p>
+                  <p class="text-primary-med-tech fs-5">Disponível</p>
+                </div>
+                <div>
+                  <p class="mb-0">Exame de Urina</p>
+                  <p class="fs-5">Indisponível</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</body>
 
+        <div class="row mt-5">
+          <div class="col-sm-6">
+            <div class="d-flex" style="height: 100%; min-width: 297px">
+              <div
+                style="width: 90%; height: fit-content"
+                class="col bg-light shadow-md rounded-1 p-3"
+              >
+                <h5>Remédios</h5>
+                <p class="text-secondary mt-n2">Seus próximos remédios</p>
+                <div style="width: 100%; height: fit-content">
+                  <div id="calendar">
+                    <div id="header">
+                      <button onclick="prevMonth()" class="button-mounth">
+                        &#8249;
+                      </button>
+                      <span id="current-month"></span>
+                      <button onclick="nextMonth()" class="button-mounth">
+                        &#8250;
+                      </button>
+                    </div>
+                    <script src="js/calendar-pills.js"></script>
+                    <div id="days"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="d-flex flex-wrap" style="height: 100%; min-width: 297px">
+              <div
+                style="width: 90%; height: fit-content"
+                class="col bg-light shadow-md rounded-1 p-3"
+              >
+                <h5>Consultas</h5>
+                <p class="text-secondary mt-n2">Seus próximos exames</p>
+                <div style="width: 100%; height: fit-content">
+                  <div id="calendar">
+                    <div id="header">
+                      <button onclick="prevMonth()" class="button-mounth">
+                        &#8249;
+                      </button>
+                      <span id="custom-current-month"></span>
+                      <button onclick="nextMonth()" class="button-mounth">
+                        &#8250;
+                      </button>
+                    </div>
+                    <script src="js/calendar-queries.js"></script>
+                    <div id="custom-days-query"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

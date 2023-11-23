@@ -1,153 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User</title>
-    <link rel="stylesheet" href="../css/user.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+<script src="../js/sidebar.js"></script>
     <title>MedTech</title>
-</head>
+  </head>
 
-<body>
-    <div class="sidebar shadow-md">
-        <div class="image-circle">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Foto do usuário">
+  <body>
+    <div id="sidebarPc" class="sidebar shadow-md">
+      <div class="image-circle">
+        <img
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Foto do usuário"
+        />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="text-center">
+          <a href="/index.html">
+            <i class="fa-solid fa-house" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div class="text-center">
-                <a href="/index.html">
-                    <i class="fa-solid fa-house" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Início</p>
-                </a>
-            </div>
-            <div class="text-center">
-                <a href="/dashboard/exames.html">
-                    <i class="fa-solid fa-file-waveform" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Exames</p>
-                </a>
-            </div>
-            <div class="text-center m-2 rounded-2 p-1">
-                <a href="/dashboard/remedio.html">
-                    <i class="fa-solid fa-pills" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Remédios</p>
-                </a>
-            </div>
+        <div class="text-center">
+          <a href="/dashboard/exames.html">
+            <i class="fa-solid fa-file-waveform" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
         </div>
+        <div class="text-center m-2 rounded-2 p-1">
+          <a href="/dashboard/remedio.html">
+            <i class="fa-solid fa-pills" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </div>
+      </div>
 
-        <div style="width: 100; display: flex; justify-content: center;">
-            <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 30px;"></i>
-        </div>
+      <div style="width: 100; display: flex; justify-content: center">
+        <i
+          class="fa-solid fa-shield-heart text-primary-med-tech"
+          style="font-size: 30px"
+        ></i>
+      </div>
     </div>
 
     <div class="content">
-        <div class="container">
-            <div class="d-flex mb-3">
-                <button style="width: 150px;" type="button" class="btn-primary-outline-med-tech">
-                    <a href="./user.html">
-                        Resumo
-                    </a>
-                </button>
-                <button style="padding: 0 10px;" class="btn-primary-med-tech" type="submit">Informações
-                    pessoais</button>
-            </div>
-            <div class="bg-light shadow-md p-3 rounded-1" style="height: 75vh;">
-                <div class="d-flex">
-                    <div style="width: 500px;" class="d-flex justify-content-center mt-5">
-                        <div class="image-circle-data">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Foto do usuário">
-                        </div>
-                    </div>
-                    <div class="row row-cols-2 mt-5">
-                        <div style="width: 420px; height: 250px;">
-                            <h3 style="font-weight: 700;">Informações pessoais</h3>
-                            <div>
-                                <p style="font-size: 20px; font-weight: 500;">Nome</p>
-                                <p style="color: #BFBFBF;">Paula Souza</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">CPF</p>
-                                    <p style="color: #BFBFBF;">550.604.619-71</p>
-                                </div>
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">RG</p>
-                                    <p style="color: #BFBFBF;">40.898.010-2</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p style="font-size: 17px; font-weight: 500;">Data de nascimento</p>
-                                <p style="color: #BFBFBF;">10/04/2004</p>
-                            </div>
-                        </div>
-
-                        <div style="width: 420px; height: 250px;">
-                            <h3 style="font-weight: 700;">Contato</h3>
-                            <div>
-                                <p style="font-size: 20px; font-weight: 500;">Email</p>
-                                <p style="color: #BFBFBF;">paulo.souza192@etec.sp.gov.br</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">Telefone</p>
-                                    <p style="color: #BFBFBF;">(11) 3905-0027</p>
-                                </div>
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">Celular</p>
-                                    <p style="color: #BFBFBF;">(11) 99703-0611</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="width: 420px; height: 250px;">
-                            <h3 style="font-weight: 700;">Endereço</h3>
-                            <div class="mb-2">
-                                <p style="font-size: 20px; font-weight: 500;">Endereço</p>
-                                <p style="color: #BFBFBF;">Rua Alfredo da Silva Azevedo</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">CEP</p>
-                                    <p style="color: #BFBFBF;">08685-070</p>
-                                </div>
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">Num.</p>
-                                    <p style="color: #BFBFBF;">160</p>
-                                </div>
-                                <div>
-                                    <p style="font-size: 17px; font-weight: 500;">Complemento</p>
-                                    <p style="color: #BFBFBF;">Apt 198</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">Estado</p>
-                                    <p style="color: #BFBFBF;">SP</p>
-                                </div>
-                                <div>
-                                    <p style="font-size: 20px; font-weight: 500;">Cidade</p>
-                                    <p style="color: #BFBFBF;">Suzano</p>
-                                </div>
-                                <div>
-                                    <p style="font-size: 17px; font-weight: 500;">Bairro</p>
-                                    <p style="color: #BFBFBF;">Vila Maluf</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="d-flex mb-3">
+          <button
+            style="width: 150px"
+            type="button"
+            class="btn-primary-outline-med-tech"
+          >
+            <a href="./user.html"> Resumo </a>
+          </button>
+          <button
+            style="padding: 0 10px"
+            class="btn-primary-med-tech"
+            type="submit"
+          >
+            Informações pessoais
+          </button>
         </div>
-    </div>
-</body>
+        <div
+          class="bg-light shadow-md p-5 rounded-1"
+          style="height: 75vh; overflow-y: auto"
+        >
+          <div class="d-flex flex-wrap">
+            <div
+              
+              class="d-flex justify-content-center mt-5 w-100 mb-5"
+            >
+              <div class="image-circle-data">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Foto do usuário"
+                />
+              </div>
+            </div>
 
+            <div style="width: 420px; height: 250px">
+              <h3 style="font-weight: 700">Informações pessoais</h3>
+              <div>
+                <p style="font-size: 17px; font-weight: 500">Nome</p>
+                <p style="color: #bfbfbf">Paula Souza</p>
+              </div>
+              <div class="d-flex mb-2">
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">CPF</p>
+                  <p style="color: #bfbfbf">550.604.619-71</p>
+                </div>
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">RG</p>
+                  <p style="color: #bfbfbf">40.898.010-2</p>
+                </div>
+              </div>
+              <div>
+                <p style="font-size: 17px; font-weight: 500">
+                  Data de nascimento
+                </p>
+                <p style="color: #bfbfbf">10/04/2004</p>
+              </div>
+            </div>
+
+            <div style="width: 420px; height: 250px">
+              <h3 style="font-weight: 700">Contato</h3>
+              <div>
+                <p style="font-size: 17px; font-weight: 500">Email</p>
+                <p style="color: #bfbfbf">paulo.souza192@etec.sp.gov.br</p>
+              </div>
+              <div class="d-flex mb-2">
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Telefone</p>
+                  <p style="color: #bfbfbf">(11) 3905-0027</p>
+                </div>
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Celular</p>
+                  <p style="color: #bfbfbf">(11) 99703-0611</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 420px; height: 250px">
+              <h3 style="font-weight: 700">Endereço</h3>
+              <div class="mb-2">
+                <p style="font-size: 17px; font-weight: 500">Endereço</p>
+                <p style="color: #bfbfbf">Rua Alfredo da Silva Azevedo</p>
+              </div>
+              <div class="d-flex mb-2">
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">CEP</p>
+                  <p style="color: #bfbfbf">08685-070</p>
+                </div>
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Num.</p>
+                  <p style="color: #bfbfbf">160</p>
+                </div>
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Complemento</p>
+                  <p style="color: #bfbfbf">Apt 198</p>
+                </div>
+              </div>
+              <div class="d-flex mb-2">
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Estado</p>
+                  <p style="color: #bfbfbf">SP</p>
+                </div>
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Cidade</p>
+                  <p style="color: #bfbfbf">Suzano</p>
+                </div>
+                <div>
+                  <p style="font-size: 17px; font-weight: 500">Bairro</p>
+                  <p style="color: #bfbfbf">Vila Maluf</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
