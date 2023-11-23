@@ -1,163 +1,267 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/exames.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/exames.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+    <script src="../js/sidebar.js"></script>
     <title>MedTech</title>
-</head>
+  </head>
 
-<body>
-    <div class="sidebar shadow-md">
-        <a href="/pages/user.html">
-            <div class="image-circle">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Foto do usuário">
-            </div>
-        </a>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div class="text-center">
-                <a href="/">
-                    <i class="fa-solid fa-house" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Início</p>
-                </a>
-            </div>
-            <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1 ">
-                <a href="/" class="text-light">
-                    <i class="fa-solid fa-file-waveform" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Exames</p>
-                </a>
-            </div>
-            <div class="text-center">
-                <a href="/dashboard/remedios.html">
-                    <i class="fa-solid fa-pills" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Remédios</p>
-                </a>
-            </div>
+  <body>
+    <div id="sidebarPc" class="sidebar shadow-md">
+      <a href="/pages/user.html">
+        <div class="image-circle">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Foto do usuário"
+          />
         </div>
+      </a>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="text-center">
+          <a href="/">
+            <i class="fa-solid fa-house" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
+        </div>
+        <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1">
+          <a href="/" class="text-light">
+            <i class="fa-solid fa-file-waveform" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
+        </div>
+        <div class="text-center">
+          <a href="/dashboard/remedios.html">
+            <i class="fa-solid fa-pills" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </div>
+      </div>
 
-        <div style="width: 100; display: flex; justify-content: center;">
-            <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 30px;"></i>
+      <div style="width: 100; display: flex; justify-content: center">
+        <i
+          class="fa-solid fa-shield-heart text-primary-med-tech"
+          style="font-size: 30px"
+        ></i>
+      </div>
+    </div>
+    <div id="sidebarMobile" class="isHidden px-5">
+      <div class="d-flex justify-content-between">
+        <i
+          id="sidebarButton"
+          class="fa-solid fa-bars"
+          style="font-size: 30px"
+        ></i>
+        <div class="image-circle">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Foto do usuário"
+          />
         </div>
+      </div>
+
+      <ul id="list" class="isHidden">
+        <li>
+          <a href="/" class="">
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/exames.html">
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/remedios.html">
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="content">
-        <div class="container">
-            <h2 style="margin-bottom: 20px;font-size: 40px;">Exames</h2>
-            <div class="bg-light shadow-md p-3 rounded-1" style="height: 80vh;">
-                <div class="d-flex justify-content-between align-items-center" style="margin: 20px 10px;">
-                    <h4>Todos os exames</h4>
-                    <div class="d-flex">
-                        <div style="width: 100px; height: 40px; border: 2px solid #b5b5b5;"
-                            class="d-flex text-black-50 rounded-1 justify-content-center align-items-center px-2 pt-3">
-                            <i class="fa-solid fa-filter"></i>
-                            <p>Filtro</p>
-                        </div>
-                        <div style="width: 300px; height: 40px; background-color: #E3E3E3; color: #6b6b6b;"
-                            class="d-flex rounded-1 justify-content-around align-items-center px-2 pt-3">
-                            <p>Pesquisar exames</p>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <table class="table">
-                    <thead class="thead">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nome do exame</th>
-                            <th scope="col">Médico</th>
-                            <th scope="col">Data</th>
-                            <th scope="col">Validade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <script src="../js/navigate.js"></script>
-                        <tr onclick="navigateToExam()">
-                            <td>285</td>
-                            <td>Cardiologia</td>
-                            <td>Dr. Barry Tyler</td>
-                            <td>25/10/2005</td>
-                            <td>
-                                <div
-                                    style="background-color: #6CC079; padding: 0 20px; border-radius: 15px; width: fit-content;color: #fff;">
-                                    Válido
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>285</td>
-                            <td>Cardiologia</td>
-                            <td>Dr. Barry Tyler</td>
-                            <td>25/10/2005</td>
-                            <td>
-                                <div
-                                    style="background-color: #C06C6C; padding: 0 20px; border-radius: 15px; width: fit-content;color: #fff;">
-                                    Urinal
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>285</td>
-                            <td>Cardiologia</td>
-                            <td>Dr. Barry Tyler</td>
-                            <td>25/10/2005</td>
-                            <td>
-                                <div
-                                    style="background-color: #C06C6C; padding: 0 20px; border-radius: 15px; width: fit-content;color: #fff;">
-                                    Válido
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>285</td>
-                            <td>Cardiologia</td>
-                            <td>Dr. Barry Tyler</td>
-                            <td>25/10/2005</td>
-                            <td>
-                                <div
-                                    style="background-color: #C06C6C; padding: 0 20px; border-radius: 15px; width: fit-content;color: #fff;">
-                                    Válido
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>285</td>
-                            <td>Cardiologia</td>
-                            <td>Dr. Barry Tyler</td>
-                            <td>25/10/2005</td>
-                            <td>
-                                <div
-                                    style="background-color: #C06C6C; padding: 0 20px; border-radius: 15px; width: fit-content;color: #fff;">
-                                    Válido
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>285</td>
-                            <td>Cardiologia</td>
-                            <td>Dr. Barry Tyler</td>
-                            <td>25/10/2005</td>
-                            <td>
-                                <div
-                                    style="background-color: #C06C6C; padding: 0 20px; border-radius: 15px; width: fit-content;color: #fff;">
-                                    Válido
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+      <div class="container flex-wrap">
+        <h2 style="margin-bottom: 20px; font-size: 40px">Exames</h2>
+        <div
+          class="bg-light shadow-md p-3 rounded-1"
+          style="height: 80vh; overflow: hidden"
+        >
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center"
+            style="margin: 20px 10px; overflow-y: auto"
+          >
+            <h4>Todos os exames</h4>
+            <div class="d-flex flex-wrap">
+              <div
+                style="width: 100px; height: 40px; border: 2px solid #b5b5b5"
+                class="d-flex w text-black-50 rounded-1 justify-content-center align-items-center px-2 pt-3"
+              >
+                <i class="fa-solid fa-filter"></i>
+                <p>Filtro</p>
+              </div>
+              <div
+                style="
+                  width: 300px;
+                  height: 40px;
+                  background-color: #e3e3e3;
+                  color: #6b6b6b;
+                "
+                class="d-flex rounded-1 justify-content-around align-items-center px-2 pt-3"
+              >
+                <p>Pesquisar exames</p>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
             </div>
-        </div>
-    </div>
-</body>
+          </div>
 
+          <table
+            style="overflow-y: scroll; height: 70%"
+            class="table table-responsive-md"
+          >
+            <thead class="thead">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome do exame</th>
+                <th scope="col">Médico</th>
+                <th scope="col">Data</th>
+                <th scope="col">Validade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <script src="../js/navigate.js"></script>
+              <tr onclick="navigateToExam()">
+                <td>285</td>
+                <td>Cardiologia</td>
+                <td>Dr. Barry Tyler</td>
+                <td>25/10/2005</td>
+                <td>
+                  <div
+                    style="
+                      background-color: #6cc079;
+                      padding: 0 20px;
+                      border-radius: 15px;
+                      width: fit-content;
+                      color: #fff;
+                    "
+                  >
+                    Válido
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>285</td>
+                <td>Cardiologia</td>
+                <td>Dr. Barry Tyler</td>
+                <td>25/10/2005</td>
+                <td>
+                  <div
+                    style="
+                      background-color: #c06c6c;
+                      padding: 0 20px;
+                      border-radius: 15px;
+                      width: fit-content;
+                      color: #fff;
+                    "
+                  >
+                    Urinal
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>285</td>
+                <td>Cardiologia</td>
+                <td>Dr. Barry Tyler</td>
+                <td>25/10/2005</td>
+                <td>
+                  <div
+                    style="
+                      background-color: #c06c6c;
+                      padding: 0 20px;
+                      border-radius: 15px;
+                      width: fit-content;
+                      color: #fff;
+                    "
+                  >
+                    Válido
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>285</td>
+                <td>Cardiologia</td>
+                <td>Dr. Barry Tyler</td>
+                <td>25/10/2005</td>
+                <td>
+                  <div
+                    style="
+                      background-color: #c06c6c;
+                      padding: 0 20px;
+                      border-radius: 15px;
+                      width: fit-content;
+                      color: #fff;
+                    "
+                  >
+                    Válido
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>285</td>
+                <td>Cardiologia</td>
+                <td>Dr. Barry Tyler</td>
+                <td>25/10/2005</td>
+                <td>
+                  <div
+                    style="
+                      background-color: #c06c6c;
+                      padding: 0 20px;
+                      border-radius: 15px;
+                      width: fit-content;
+                      color: #fff;
+                    "
+                  >
+                    Válido
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>285</td>
+                <td>Cardiologia</td>
+                <td>Dr. Barry Tyler</td>
+                <td>25/10/2005</td>
+                <td>
+                  <div
+                    style="
+                      background-color: #c06c6c;
+                      padding: 0 20px;
+                      border-radius: 15px;
+                      width: fit-content;
+                      color: #fff;
+                    "
+                  >
+                    Válido
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

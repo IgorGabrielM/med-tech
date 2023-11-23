@@ -118,3 +118,10 @@ table {
     border-radius: 10px;
     overflow: hidden;
 }
+
+.isHidden {
+    display: none;
+}
+#list  {
+  list-style-type: none;
+}

@@ -1,84 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/remedios.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/remedios.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+    <script src="../js/sidebar.js"></script>
     <title>MedTech</title>
-</head>
+  </head>
 
-<body>
-    <div class="sidebar shadow-md">
-        <a href="/pages/user.html">
-            <div class="image-circle">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Foto do usuário">
-            </div>
-        </a>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div class="text-center  ">
-                <a href="/">
-                    <i class="fa-solid fa-house" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Início</p>
-                </a>
-            </div>
-            <div class="text-center">
-                <a href="/dashboard/exames.html">
-                    <i class="fa-solid fa-file-waveform" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Exames</p>
-                </a>
-            </div>
-            <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1">
-                <a href="#" class="text-light">
-                    <i class="fa-solid fa-pills" style="font-size: 20px;"></i>
-                    <p style="font-size: 0.8rem">Remédios</p>
-                </a>
-            </div>
+  <body>
+    <div id="sidebarPc" class="sidebar shadow-md">
+      <a href="/pages/user.html">
+        <div class="image-circle">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Foto do usuário"
+          />
         </div>
+      </a>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="text-center">
+          <a href="/">
+            <i class="fa-solid fa-house" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
+        </div>
+        <div class="text-center">
+          <a href="/dashboard/exames.html">
+            <i class="fa-solid fa-file-waveform" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
+        </div>
+        <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1">
+          <a href="#" class="text-light">
+            <i class="fa-solid fa-pills" style="font-size: 20px"></i>
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </div>
+      </div>
 
-        <div style="width: 100; display: flex; justify-content: center;">
-            <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 30px;"></i>
+      <div style="width: 100; display: flex; justify-content: center">
+        <i
+          class="fa-solid fa-shield-heart text-primary-med-tech"
+          style="font-size: 30px"
+        ></i>
+      </div>
+    </div>
+
+    <div id="sidebarMobile" class="isHidden px-5">
+      <div class="d-flex justify-content-between">
+        <i
+          id="sidebarButton"
+          class="fa-solid fa-bars"
+          style="font-size: 30px"
+        ></i>
+        <div class="image-circle">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Foto do usuário"
+          />
         </div>
+      </div>
+
+      <ul id="list" class="isHidden">
+        <li>
+          <a href="/" class="">
+            <p style="font-size: 0.8rem">Início</p>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/exames.html">
+            <p style="font-size: 0.8rem">Exames</p>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/remedios.html">
+            <p style="font-size: 0.8rem">Remédios</p>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="content">
-        <div class="container">
-            <h2 style="margin-bottom: 20px;font-size: 40px;">Paracetamol</h2>
-            <div class="bg-light shadow-md p-3 rounded-1" style="height: 55vh;">
-                <div style="margin: 20px 10px; padding: 10px;" class="d-flex">
-                    <div>
-                        <div style="margin-bottom: 30px;">
-                            <h4>Quantidade</h4>
-                            <h6 style="color: #6b6b6b;">5 comprimidos (500 mg)</h6>
-                        </div>
-                        <div>
-                            <h4 style="margin-bottom: 10px;">Como tomar</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan velit id congue
-                                condimentum. Duis non elit convallis purus feugiat condimentum. Integer urna lectus,
-                                varius non augue eget, pretium dapibus enim. Fusce in molestie purus. Interdum et
-                                malesuada fames ac ante ipsum primis in faucibus. Cras in convallis mi.</p>
-                        </div>
-                    </div>
-
-                    <div style="width: 450px;">
-                        <h4>Onde encontrar</h4>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7340.0123333223355!2d-47.194263149163994!3d-23.0968701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf4ca99ebf215f%3A0xfe5840f347c98ae4!2sDrogasil!5e0!3m2!1spt-BR!2sbr!4v1700596833609!5m2!1spt-BR!2sbr"
-                            width="400" height="400" style="border:0; border-radius: 10px;" allowfullscreen=""
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 style="margin-bottom: 20px; font-size: 40px">Paracetamol</h2>
+        <div
+          class="bg-light shadow-md p-3 rounded-1"
+          style="height: 80vh; overflow-y: scroll"
+        >
+          <div
+            style="margin: 20px 10px; padding: 10px"
+            class="d-flex flex-wrap"
+          >
+            <div>
+              <div style="margin-bottom: 30px">
+                <h4>Quantidade</h4>
+                <h6 style="color: #6b6b6b">5 comprimidos (500 mg)</h6>
+              </div>
+              <div>
+                <h4 style="margin-bottom: 10px">Como tomar</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  accumsan velit id congue condimentum. Duis non elit convallis
+                  purus feugiat condimentum. Integer urna lectus, varius non
+                  augue eget, pretium dapibus enim. Fusce in molestie purus.
+                  Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                  Cras in convallis mi.
+                </p>
+              </div>
             </div>
-        </div>
-    </div>
-</body>
 
+            <div class="overflow-auto" style="width: 450px">
+              <h4>Onde encontrar</h4>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7340.0123333223355!2d-47.194263149163994!3d-23.0968701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf4ca99ebf215f%3A0xfe5840f347c98ae4!2sDrogasil!5e0!3m2!1spt-BR!2sbr!4v1700596833609!5m2!1spt-BR!2sbr"
+                width="400"
+                height="400"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

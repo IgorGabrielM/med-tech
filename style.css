@@ -56,6 +56,12 @@ body {
   border-radius: 50%;
 }
 
+.sidebarDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .sidebar a {
   margin-top: 15px;
   margin-bottom: 0;
@@ -70,10 +76,18 @@ body {
   text-decoration: none;
 }
 
+#list  {
+  list-style-type: none;
+}
+
+.isHidden {
+  display: none;
+}
+
 .content {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   padding: 2rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .d-flex {
@@ -204,7 +218,7 @@ body {
   color: white;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .gutter-md {
     gap: 20px;
   }
