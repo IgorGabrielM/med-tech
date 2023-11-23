@@ -1,170 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/exames.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
-    <script src="../js/sidebar.js"></script>
-    <title>MedTech</title>
-  </head>
 
-  <body>
-    <div id="sidebarPc" class="sidebar shadow-md">
-      <a href="/pages/user.html">
-        <div class="image-circle">
-          <img
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Foto do usuário"
-          />
-        </div>
-      </a>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <div class="text-center">
-          <a href="/">
-            <i class="fa-solid fa-house" style="font-size: 20px"></i>
-            <p style="font-size: 0.8rem">Início</p>
-          </a>
-        </div>
-        <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1">
-          <a href="/" class="text-light">
-            <i class="fa-solid fa-file-waveform" style="font-size: 20px"></i>
-            <p style="font-size: 0.8rem">Exames</p>
-          </a>
-        </div>
-        <div class="text-center">
-          <a href="/dashboard/remedios.html">
-            <i class="fa-solid fa-pills" style="font-size: 20px"></i>
-            <p style="font-size: 0.8rem">Remédios</p>
-          </a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/exames.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+  <script src="../js/sidebar.js"></script>
+  <title>MedTech</title>
+</head>
+
+<body>
+  <div id="sidebarPc" class="sidebar shadow-md">
+    <a href="/pages/user.html">
+      <div class="image-circle">
+        <img
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Foto do usuário" />
       </div>
-
-      <div style="width: 100; display: flex; justify-content: center">
-        <i
-          class="fa-solid fa-shield-heart text-primary-med-tech"
-          style="font-size: 30px"
-        ></i>
+    </a>
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div class="text-center">
+        <a href="/">
+          <i class="fa-solid fa-house" style="font-size: 20px"></i>
+          <p style="font-size: 0.8rem">Início</p>
+        </a>
+      </div>
+      <div class="text-center bg-primary-med-tech m-2 rounded-2 p-1">
+        <a href="/" class="text-light">
+          <i class="fa-solid fa-file-waveform" style="font-size: 20px"></i>
+          <p style="font-size: 0.8rem">Exames</p>
+        </a>
+      </div>
+      <div class="text-center">
+        <a href="/dashboard/remedios.html">
+          <i class="fa-solid fa-pills" style="font-size: 20px"></i>
+          <p style="font-size: 0.8rem">Remédios</p>
+        </a>
       </div>
     </div>
 
-    <div id="sidebarMobile" class="isHidden px-5">
-      <div class="d-flex justify-content-between">
-        <i
-          id="sidebarButton"
-          class="fa-solid fa-bars"
-          style="font-size: 30px"
-        ></i>
-        <div class="image-circle">
-          <img
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Foto do usuário"
-          />
-        </div>
-      </div>
-
-      <ul id="list" class="isHidden">
-        <li>
-          <a href="/" class="">
-            <p style="font-size: 0.8rem">Início</p>
-          </a>
-        </li>
-        <li>
-          <a href="/dashboard/exames.html">
-            <p style="font-size: 0.8rem">Exames</p>
-          </a>
-        </li>
-        <li>
-          <a href="/dashboard/remedios.html">
-            <p style="font-size: 0.8rem">Remédios</p>
-          </a>
-        </li>
-      </ul>
+    <div style="width: 100; display: flex; justify-content: center">
+      <i class="fa-solid fa-shield-heart text-primary-med-tech" style="font-size: 30px"></i>
     </div>
-    <div class="content">
-      <div class="container">
-        <h2 style="margin-bottom: 20px; font-size: 40px">
-          Exame de cardiologia
-        </h2>
-        <div
-          class="bg-light shadow-md p-3 rounded-1"
-          style="height: 80vh; overflow-y: scroll"
-        >
-          <div
-            style="margin: 20px 10px; padding: 10px"
-            class="d-flex flex-wrap"
-          >
-            <div>
-              <div>
-                <h4>Médico</h4>
-                <h6 style="color: #6b6b6b">Dr. Barry Tyler</h6>
-              </div>
-              <div>
-                <h4>Informações</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  accumsan velit id congue condimentum. Duis non elit convallis
-                  purus feugiat condimentum. Integer urna lectus, varius non
-                  augue eget, pretium dapibus enim. Fusce in molestie purus.
-                  Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                  Cras in convallis mi.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  accumsan velit id congue condimentum. Duis non elit convallis
-                  purus feugiat condimentum. Integer urna lectus, varius non
-                  augue eget, pretium dapibus enim. Fusce in molestie purus.
-                  Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                  Cras in convallis mi.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  accumsan velit id congue condimentum. Duis non elit convallis
-                  purus feugiat condimentum. Integer urna lectus, varius non
-                  augue eget, pretium dapibus enim. Fusce in molestie purus.
-                  Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                  Cras in convallis mi.
-                </p>
-              </div>
-            </div>
+  </div>
 
+  <div id="sidebarMobile" class="isHidden px-5">
+    <i id="sidebarButton" class="fa-solid fa-bars"
+      style="font-size: 30px; position: absolute; top: 15px; left: 15px;"></i>
+    <div s class="d-flex justify-content-center items-center p-2">
+      <div class="image-circle-mobile">
+        <img
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Foto do usuário" />
+      </div>
+    </div>
+
+
+    <ul id="list" class="isHidden">
+      <li>
+        <a href="/" class="">
+          <p style="font-size: 0.8rem">Início</p>
+        </a>
+      </li>
+      <li>
+        <a href="/dashboard/exames.html">
+          <p style="font-size: 0.8rem">Exames</p>
+        </a>
+      </li>
+      <li>
+        <a href="/dashboard/remedios.html">
+          <p style="font-size: 0.8rem">Remédios</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="container">
+      <h2 style="margin-bottom: 20px; font-size: 40px">
+        Exame de cardiologia
+      </h2>
+      <div class="bg-light shadow-md p-3 rounded-1" style="height: 80vh; overflow-y: scroll">
+        <div style="margin: 20px 10px; padding: 10px" class="d-flex flex-wrap">
+          <div>
             <div>
-              <h4>Imagens</h4>
-              <div class="d-flex flex-wrap">
-                <img
-                  style="width: 220px; border-radius: 15px"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Echocardiogram_4chambers.jpg/300px-Echocardiogram_4chambers.jpg"
-                  alt="Imagem do exame"
-                />
-                <img
-                  style="width: 220px; border-radius: 15px"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Echocardiogram_4chambers.jpg/300px-Echocardiogram_4chambers.jpg"
-                  alt="Imagem do exame"
-                />
-              </div>
-              <button
-                style="width: 100%; height: 45px; margin-top: 10px"
-                class="btn-primary-med-tech"
-              >
-                Ver todas as imagens
-              </button>
+              <h4>Médico</h4>
+              <h6 style="color: #6b6b6b">Dr. Barry Tyler</h6>
             </div>
+            <div>
+              <h4>Informações</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                accumsan velit id congue condimentum. Duis non elit convallis
+                purus feugiat condimentum. Integer urna lectus, varius non
+                augue eget, pretium dapibus enim. Fusce in molestie purus.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                Cras in convallis mi.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                accumsan velit id congue condimentum. Duis non elit convallis
+                purus feugiat condimentum. Integer urna lectus, varius non
+                augue eget, pretium dapibus enim. Fusce in molestie purus.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                Cras in convallis mi.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                accumsan velit id congue condimentum. Duis non elit convallis
+                purus feugiat condimentum. Integer urna lectus, varius non
+                augue eget, pretium dapibus enim. Fusce in molestie purus.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                Cras in convallis mi.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4>Imagens</h4>
+            <div class="d-flex flex-wrap">
+              <img style="width: 220px; border-radius: 15px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Echocardiogram_4chambers.jpg/300px-Echocardiogram_4chambers.jpg"
+                alt="Imagem do exame" />
+              <img style="width: 220px; border-radius: 15px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Echocardiogram_4chambers.jpg/300px-Echocardiogram_4chambers.jpg"
+                alt="Imagem do exame" />
+            </div>
+            <button style="width: 100%; height: 45px; margin-top: 10px" class="btn-primary-med-tech">
+              Ver todas as imagens
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

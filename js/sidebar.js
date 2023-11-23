@@ -17,9 +17,6 @@ const getSidebar = () => {
 const windowResizer = () => {
   var sidebarPc = document.getElementById("sidebarPc"); // Removed '#' from the element ID
   var sidebarMobile = document.querySelector("#sidebarMobile"); // Removed '#' from the element ID
-  console.log("Window resized", window.innerWidth);
-  console.log("Sidebar PC", sidebarPc);
-  console.log("Sidebar Mobile", sidebarMobile);
 
   // Check if the sidebar elements exist
   if (sidebarPc || sidebarMobile) {
